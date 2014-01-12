@@ -94,3 +94,32 @@ set products = [
         "price": "1.550.000"
     }]
 %}
+
+{% set asset_url = '/static/img/product_detail/' %}
+
+{%
+set product_detail = {
+    "image_url": asset_url + "ALEXANDRE-CHRISTIE-AC6314-Rose-gold-white-dial-brown-leather-diameter-3.8x4.2cm-900rb-200x149.jpg",
+    "name": "Alexandre Christie 6314 Rose Gold White Dial Brown Leather",
+    "price": "900.000",
+    "description": '<div><strong>Spesification :</strong><ul>
+<li><span style="color: #0000ff;"><strong>Diameter : 38 x 42 mm</strong></span></li>
+<li>Caliber movement YM12</li>
+<li>Stainless steel case and leather band</li>
+<li>Chronograph</li>
+<li>Hard crystal material</li>
+<li><span style="color: #0000ff;"><strong>Water resistant to 5 ATM</strong></span></li>
+</ul></div>',
+    "images": [
+        asset_url + "alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather.jpg",
+        asset_url + "alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather_2.jpg",
+        asset_url + "alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather_3.jpg",
+        asset_url + "ALEXANDRE-CHRISTIE-AC6314-Rose-gold-white-dial-brown-leather-diameter-3.8x4.2cm-900rb.jpg"
+    ]
+}
+%}
+
+
+
+
+

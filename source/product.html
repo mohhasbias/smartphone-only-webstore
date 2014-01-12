@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% import "partial/fixtures.html" as data %}
+
+{% set product = data.product_detail %}
+{% block content %}
+    <div class="row">
+        <div class="small-12 columns">
+            <h1 id="header" class="panel">
+                {{product.name}}
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-center small-12 columns">
+            <img src='{{product.image_url}}'/>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="small-12 columns">
+            <div class="panel">
+               <div class="text-center">Price: Rp {{product.price}}</div>
+               <br>
+               <div class="text-center">
+                  <a href="#" class="small button radius" style="margin-bottom:0;">Buy</a>
+               </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-center small-12 columns">
+            100% Original<br>
+            Kelengkapan: Kartu Garansi, Manual Book & Box<br>
+            Garansi Uang Kembali Jika Ternyata Terbukti Palsu<br>
+            <br>
+            <span class="text-left">{{product.description|safe}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 columns">
+            <h2 class="panel">Related Product</h2>
+        </div>
+    </div>
+    {% for i in [1,2,3,4] %} 
+        {% set product = data.products|random %}
+        <a href="product.html">
+            <div class="row">
+                <div class="text-center small-5 columns">
+                    <img style="max-height:125px;" src='{{product.image_url}}'>
+                </div>
+                <div class="small-7 columns">
+                    <h4>
+                        <strong>{{product.name}}</strong><br/>
+                        {% if product.sale %}
+                            <span style="text-decoration:line-through;">Rp {{product.price}}</span><br/>
+                            <strong style="color:firebrick;">Rp {{product.sale}}</strong>
+                        {% else %}
+                            <strong style="color:firebrick;">Rp {{product.price}}</strong>
+                        {% endif %}
+                    </h4>
+                </div>
+            </div>
+        </a>
+        {% if not loop.last %}
+            <hr>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
