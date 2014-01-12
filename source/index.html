@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% set names=['satu','dua','tiga','empat'] %}
+
 {% block title %}Welcome to Clay{% endblock %}
 
 {% block head %}
@@ -8,6 +10,12 @@
 {%- endblock %}
 
 {% block content %}
-  <h1>Welcome to Clay</h1>
+  <h1>Welcome</h1>
   <p>Now open <code>source/index.html</code> to edit me. ;)</p>
+  
+  <ul>
+  {% for name in names %}
+    <li>{{name}}</li>
+  {% endfor %}
+  </ul>
 {%- endblock %}
