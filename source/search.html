@@ -5,22 +5,29 @@
 {% block content %}
 <div class="row">
     <div class="panel small-12 columns">
-        <h1>21 item ditemukan</h1>
+        <h1 id="header">{{data.products|count}} item ditemukan</h1>
     </div>
 </div>
 
 {% for product in data.products %}
-    <div class="row">
-        <div class="small-5 columns">
-            <img src='{{product.image_url}}'>
+    <a href="product.html">
+        <div class="row">
+            <div class="text-center small-5 columns">
+                <img style="max-height:125px;" src='{{product.image_url}}'>
+            </div>
+            <div class="small-7 columns">
+                <h4>
+                    <strong>{{product.name}}</strong><br/>
+                    {% if product.sale %}
+                        <span style="text-decoration:line-through;">Rp {{product.price}}</span><br/>
+                        <strong style="color:firebrick;">Rp {{product.sale}}</strong>
+                    {% else %}
+                        <strong style="color:firebrick;">Rp {{product.price}}</strong>
+                    {% endif %}
+                </h4>
+            </div>
         </div>
-        <div class="small-7 columns">
-            <h4>
-                <strong>{{product.name}}</strong><br/>
-                <strong style="color:firebrick;">Rp {{product.price}}</strong>
-            </h4>
-        </div>
-    </div>
+    </a>
     {% if not loop.last %}
         <hr>
     {% endif %}
