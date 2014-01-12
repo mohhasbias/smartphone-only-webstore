@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% import 'partial/fixtures.html' as data %}
+
+{% block content %}
+<div class="row">
+    <div class="panel small-12 columns">
+        <h1>21 item ditemukan</h1>
+    </div>
+</div>
+
+{% for product in data.products %}
+    <div class="row">
+        <div class="small-5 columns">
+            <img src='{{product.image_url}}'>
+        </div>
+        <div class="small-7 columns">
+            <h4>
+                <strong>{{product.name}}</strong><br/>
+                <strong style="color:firebrick;">Rp {{product.price}}</strong>
+            </h4>
+        </div>
+    </div>
+    {% if not loop.last %}
+        <hr>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

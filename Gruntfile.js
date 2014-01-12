@@ -3,7 +3,10 @@ module.exports = function(grunt){
 		pkg: grunt.file.readJSON('package.json'),
 		watch: {
 			html: {
-				files: ['source/*.html']
+				files: [
+					'source/*.html',
+					'source/partial/*.html'
+				]
 			},
 			options: {
 				livereload: true
@@ -12,10 +15,11 @@ module.exports = function(grunt){
 		browser_sync: {
 			dev: {
 				bsFiles: {
-					src: 'source/static/styles/*.css'
+					src: 'source/static/css/*.css'
 				},
 				options: {
-					watchTask: true
+					watchTask: true,
+					host: "192.168.150.1"
 				}
 			}
 		}

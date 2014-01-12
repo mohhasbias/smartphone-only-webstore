@@ -1,29 +1,66 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{% block title %}Welcome to Clay{% endblock %}</title>
-  <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
-  <link href="/static/styles/bootstrap.css" rel="stylesheet">
-  <link href="/static/styles/bootstrap-responsive.css" rel="stylesheet">
-  <link href="/static/styles/main.css" rel="stylesheet">
-  {% block head %}{% endblock %}
-</head>
-<body>
-  {% block content %}{% endblock %}
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Murah Grosir Mobile Store</title>
+		<link rel="stylesheet" href="/static/css/foundation.css" />
+		<script src="/static/js/modernizr.js"></script>
+	</head>
+	<body>
+    
+		{% include "partial/topbar.html" %}
+		
+		<br/>
+		
+		{% include "partial/search-form.html" %}
+		
+		{% block content %}{% endblock %}
+	
+		<hr>
+		
+	<!-- 	customer support -->
+		<br>
+		<div class="row">
+			<div class="small-12 columns">
+				<ul class="no-bullet" style="font-size: smaller;">
+					<li>
+					  <i class="icon-phone icon-2x pull-left"></i>
+					  <span>
+						IM3 - 081.559.18618<br>
+						XL - 0857.8543.3965
+					  </span>
+					</li>
+					<li>
+					  <i class="icon-comments-alt icon-2x pull-left"></i>
+					  <span>
+						PIN BBM - 2B144E98 | 24C3B2A7<br>
+						WhatsApp - -
+					  </span>
+					</li>
+					<li>
+					  <i class="icon-map-marker icon-2x pull-left"></i>
+					  <span>
+						Alamat:<br>
+						Jln. Karimata 105-D Jember Jatim.
+					  </span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<script src="/static/js/jquery.js"></script>
+		<script src="/static/js/foundation.min.js"></script>
+		<script>
+		  $(document).foundation();
+		</script>
+		
+	<!-- 	browser-sync -->
+		<script src='//192.168.150.1:3000/socket.io/socket.io.js'></script>
+		<script src='//192.168.150.1:3001/client/browser-sync-client.min.js'></script>
+		
+	<!-- livereload -->
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
-  <div class="✓">Powered by <a href="http://lucuma.github.com/Clay">Clay</a></div>
-
-  <script src="/static/scripts/jquery-1.9.1.min.js"></script>
-  <script src="/static/scripts/bootstrap.js"></script>
-  <script src="/static/scripts/main.js"></script>
-  
-<!--   browser-sync -->
-  <script src='//192.168.42.34:3000/socket.io/socket.io.js'></script>
-  <script src='//192.168.42.34:3001/client/browser-sync-client.min.js'></script>
-
-<!-- livereload -->
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-</body>
+	</body>
 </html>
