@@ -12,8 +12,15 @@
         </div>
     </div>
     <div class="row">
-        <div class="text-center small-12 columns">
-            <img src='{{product.image_url}}'/>
+        <div class="small-12 columns">
+            <a href="{{product.image_url}}" data-lightbox="image-1"><img src='{{product.image_url}}'/></a>
+            <br>
+            <div style="margin-bottom:5px;"></div>
+            {% for image in product.images %}
+                <a href="{{image}}" data-lightbox="image-1">
+                    <img width="90" src="{{image}}" />
+                </a>
+            {% endfor %}
         </div>
     </div>
     <br>
