@@ -7,7 +7,8 @@
 		<link rel="stylesheet" href="static/css/foundation.css" />
 		<script src="static/js/modernizr.js"></script>
 		
-		<link rel="stylesheet" href="static/css/app.css" ?>
+		<link rel="stylesheet" href="static/css/app.css" />
+		<link rel="stylesheet" href="static/css/lightbox.css" />
 	</head>
 	<body>
     
@@ -113,8 +114,23 @@
         </div>
     </div>
     <div class="row">
-        <div class="text-center small-12 columns">
-            <img src="static/img/product_detail/ALEXANDRE-CHRISTIE-AC6314-Rose-gold-white-dial-brown-leather-diameter-3.8x4.2cm-900rb-200x149.jpg"/>
+        <div class="small-12 columns">
+            <a href="static/img/product_detail/ALEXANDRE-CHRISTIE-AC6314-Rose-gold-white-dial-brown-leather-diameter-3.8x4.2cm-900rb.jpg" data-lightbox="image-1"><img src="static/img/product_detail/ALEXANDRE-CHRISTIE-AC6314-Rose-gold-white-dial-brown-leather-diameter-3.8x4.2cm-900rb.jpg"/></a>
+            <br>
+            <div style="margin-bottom:5px;"></div>
+            
+                <a href="static/img/product_detail/alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather.jpg" data-lightbox="image-1">
+                    <img width="90" src="static/img/product_detail/alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather.jpg" />
+                </a>
+            
+                <a href="static/img/product_detail/alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather_2.jpg" data-lightbox="image-1">
+                    <img width="90" src="static/img/product_detail/alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather_2.jpg" />
+                </a>
+            
+                <a href="static/img/product_detail/alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather_3.jpg" data-lightbox="image-1">
+                    <img width="90" src="static/img/product_detail/alexandre-christie-ac-6314-rose-gold-white-dial-brown-leather_3.jpg" />
+                </a>
+            
         </div>
     </div>
     <br>
@@ -155,26 +171,6 @@
         <a href="product.html">
             <div class="row">
                 <div class="text-center small-5 columns">
-                    <img style="max-height:125px;" src="static/img/products/Caterpillar-CAT-PO.161.64.134.jpg">
-                </div>
-                <div class="small-7 columns">
-                    <h4>
-                        <strong>Caterpillar CAT PO 161.64.134</strong><br/>
-                        
-                            <strong style="color:firebrick;">Rp 1.550.000</strong>
-                        
-                    </h4>
-                </div>
-            </div>
-        </a>
-        
-            <hr>
-        
-     
-        
-        <a href="product.html">
-            <div class="row">
-                <div class="text-center small-5 columns">
                     <img style="max-height:125px;" src="static/img/products/A.C-2253-SS-Permata-Biru-550rb.jpg">
                 </div>
                 <div class="small-7 columns">
@@ -195,13 +191,33 @@
         <a href="product.html">
             <div class="row">
                 <div class="text-center small-5 columns">
-                    <img style="max-height:125px;" src="static/img/products/Ac-6223-Silver-Ori-720rb-4.5cm.jpg">
+                    <img style="max-height:125px;" src="static/img/products/A.C-2253-SS-Permata-ungu-550rb.jpg">
                 </div>
                 <div class="small-7 columns">
                     <h4>
-                        <strong>Alexandre Christie 6223 Silver</strong><br/>
+                        <strong>Alexandre Christie 2253 SS Permata Ungu</strong><br/>
                         
-                            <strong style="color:firebrick;">Rp 720.000</strong>
+                            <strong style="color:firebrick;">Rp 550.000</strong>
+                        
+                    </h4>
+                </div>
+            </div>
+        </a>
+        
+            <hr>
+        
+     
+        
+        <a href="product.html">
+            <div class="row">
+                <div class="text-center small-5 columns">
+                    <img style="max-height:125px;" src="static/img/products/Ac-2345-Ceramic-White-Silver-Ori-605rb-3cm.jpg">
+                </div>
+                <div class="small-7 columns">
+                    <h4>
+                        <strong>Alexandre Christie 2345 SS Ceramic White Silver</strong><br/>
+                        
+                            <strong style="color:firebrick;">Rp 605.000</strong>
                         
                     </h4>
                 </div>
@@ -269,6 +285,9 @@
 		  $(document).foundation();
 		</script>
 		
+<!-- 		lightbox -->
+		<script src="static/js/vendor/lightbox-2.6.min.js"></script>
+		
 <!-- 		fittext -->
 		<script src="static/js/vendor/jquery.fittext.js"></script>
 		<script>
@@ -277,8 +296,8 @@
 		</script>
 		
 	<!-- 	browser-sync -->
-		<script src='//192.168.150.1:3000/socket.io/socket.io.js'></script>
-		<script src='//192.168.150.1:3001/client/browser-sync-client.min.js'></script>
+<!-- 		<script src='//192.168.150.1:3000/socket.io/socket.io.js'></script> -->
+<!-- 		<script src='//192.168.150.1:3001/client/browser-sync-client.min.js'></script> -->
 		
 	<!-- livereload -->
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
