@@ -7,6 +7,7 @@ FILTER_PARTIALS = True
 ## You can use patterns here eg: "deprecated/*"
 FILTER = [
   'base.html',
+  'partial/*',
 ]
 
 ## When building, force the inclusion of all the HTML partials listed here.

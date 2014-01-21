@@ -10,24 +10,7 @@
 </div>
 
 {% for product in data.products %}
-    <a href="product.html">
-        <div class="row">
-            <div class="text-center small-5 columns">
-                <img style="max-height:125px;" src='{{product.image_url}}'>
-            </div>
-            <div class="small-7 columns">
-                <h4>
-                    <strong>{{product.name}}</strong><br/>
-                    {% if product.sale %}
-                        <span style="text-decoration:line-through;">Rp {{product.price}}</span><br/>
-                        <strong style="color:firebrick;">Rp {{product.sale}}</strong>
-                    {% else %}
-                        <strong style="color:firebrick;">Rp {{product.price}}</strong>
-                    {% endif %}
-                </h4>
-            </div>
-        </div>
-    </a>
+    {% include 'partial/product-line.html' %}
     {% if not loop.last %}
         <hr>
     {% endif %}

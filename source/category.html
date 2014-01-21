@@ -3,5 +3,49 @@
 {% import "partial/fixtures.html" as data %}
 
 {% block content %}
-{{data.ac_christie}}
+
+    <div class="row">
+        <div class="small-12 columns">
+            <ul class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li class="current">Alexandre Christie</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="pagination-centered">
+        <ul class="pagination">
+            <li class="arrow unavailable"><a href="">&laquo;</a></li>
+            <li class="current"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li class="unavailable"><a href="">&hellip;</a></li>
+            <li><a href="">12</a></li>
+            <li><a href="">13</a></li>
+            <li class="arrow"><a href="">&raquo;</a></li>
+        </ul>
+    </div>    
+    
+    {% for product in data.ac_christie %}
+        {% include 'partial/product-line.html' %}
+        {% if not loop.last %}
+            <hr>
+        {% endif %}
+    {% endfor %}
+    
+    <div class="pagination-centered" style="margin-top:22px;">
+        <ul class="pagination">
+            <li class="arrow unavailable"><a href="">&laquo;</a></li>
+            <li class="current"><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li class="unavailable"><a href="">&hellip;</a></li>
+            <li><a href="">12</a></li>
+            <li><a href="">13</a></li>
+            <li class="arrow"><a href="">&raquo;</a></li>
+        </ul>
+    </div>    
+
 {% endblock %}
