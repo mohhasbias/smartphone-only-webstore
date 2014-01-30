@@ -15,41 +15,28 @@
 		</div>
 	</div>
 	
+{% import "partial/fixtures.html" as data %}
 <!-- kategori produk -->
 	<br>
 	<div class="row">
 		<div class="small-12 columns">
 			<dl class="accordion" data-accordion>
-			  <dd>
-				<a href="#panel1">Jam Original</a>
-				<div id="panel1" class="content">
-					<ul class="side-nav">
-					  <li><a href="#">Alexandre Christie</a></li>
-					  <li><a href="#">Guess</a></li>
-					  <li><a href="#">DKNY</a></li>
-					  <li><a href="#">Nautica</a></li>
-					</ul>
-				</div>
-			  </dd>
-			  <dd>
-				<a href="#panel2">Kacamata</a>
-				<div id="panel2" class="content">
-				  <ul class="side-nav">
-					  <li><a href="#">Sun Glass</a></li>
-					  <li><a href="#">Frame</a></li>
-					</ul>
-				</div>
-			  </dd>
-			  <dd>
-				<a href="#panel3">Jaket & Kaos Bola</a>
-				<div id="panel3" class="content">
-				  <ul class="side-nav">
-					  <li><a href="#">Jaket Bola</a></li>
-					  <li><a href="#">Jersey Klub Bola</a></li>
-					  <li><a href="#">Kaos Bola</a></li>
-					</ul>
-				</div>
-			  </dd>
+				{% for category in data.categories recursive %}
+					{% if category.subcategory is defined %}
+						<dd>
+							{% set id_panel = category.name|lower|replace(' ','-') %}
+							<a href="#{{id_panel}}">{{category.name}}</a>
+							<div id="{{id_panel}}" class="content">
+								<dl class="accordion" data-accordion>
+									{% set outer_loop = loop %}
+									{{loop(category.subcategory)}}
+								</dl>
+							</div>
+						</dd>
+					{% else %}
+						<dd><div><a href="category.html">{{category.name}}</a></div></dd>
+					{% endif %}
+				{% endfor %}
 			</dl>
 		</div>
 	</div>
