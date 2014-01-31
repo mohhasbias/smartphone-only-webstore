@@ -24,7 +24,7 @@
 				{% for category in data.categories recursive %}
 					{% if category.subcategory is defined %}
 						<dd>
-							{% set id_panel = category.name|lower|replace(' ','-') %}
+							{% set id_panel = category.name|lower|replace(' ','-')|replace('&','-') %}
 							<a href="#{{id_panel}}">{{category.name}}</a>
 							<div id="{{id_panel}}" class="content">
 								<dl class="accordion" data-accordion>
