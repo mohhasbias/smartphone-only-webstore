@@ -1,9 +1,9 @@
 {
-	"name": "murahgrosir-mobile",
-	"version": "1.0.0",
-	"devDependencies": {
-		"grunt": "~0.4.1",
-		"grunt-contrib-watch": "0.5.2",
-		"grunt-browser-sync": "0.4.8"
-	}
+  "name": "murahgrosir-mobile",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-shell": "~0.6.4"
+  }
 }
