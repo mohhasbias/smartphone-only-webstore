@@ -7,7 +7,7 @@ module.exports = function(grunt){
 					'source/*.html',
 					'source/partial/*.html'
 				],
-				tasks: ['shell:clayBuild'],
+				//tasks: ['shell:clayBuild'],
 				options: {
 					livereload: true
 				}
