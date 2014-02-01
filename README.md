@@ -1,6 +1,11 @@
 
-#  <Project name>
+# Smartphone Only Web Store 
 
+## Todo List
+[] ganti tombol search dengan icon search dari font awesome
+[] tambahkan indikator keterkaitan antara topbar dengan dropdown yang muncul
+[] tambahkan panah pada accordion
+[] lightbox tidak perlu diganti swipebox. cukup pakai clearing dari foundation
 
 ## Instructions
 
