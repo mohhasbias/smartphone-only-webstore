@@ -7,21 +7,23 @@ module.exports = function(grunt){
 					'source/*.html',
 					'source/partial/*.html'
 				],
-				//tasks: ['shell:clayBuild'],
 				options: {
 					livereload: true
 				}
 			},
 		},
-		shell: {
-			clayBuild: {
-				command: 'clay build'
+		browser_sync: {
+			bsFiles: {
+				src: 'source/static/css/app.css'
+			},
+			options: {
+				watchTask: true
 			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-shell');
+	grunt.loadNpmTasks('grunt-browser-sync');
 
-	grunt.registerTask('default',['watch']);
+	grunt.registerTask('default',['browser_sync', 'watch']);
 };

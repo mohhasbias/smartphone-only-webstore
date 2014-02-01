@@ -69,8 +69,15 @@
 		</script>
 		
 	<!-- 	browser-sync -->
-<!-- 		<script src='//192.168.150.1:3000/socket.io/socket.io.js'></script> -->
-<!-- 		<script src='//192.168.150.1:3001/client/browser-sync-client.min.js'></script> -->
+		<script>
+			var host = (location.host || 'localhost').split(':')[0];
+			document.write(
+				'<script src="//' + host + ':3000/socket.io/socket.io.js"></' + 'script>' +
+				'<script>var ___socket___ = io.connect("http://' + host + ':3000");<' + '/script>' +
+				'<script src="//192.168.42.106:3001/client/browser-sync-client.min.js"><' + '/script>'
+			);
+		</script>
+		
 		
 	<!-- livereload -->
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
