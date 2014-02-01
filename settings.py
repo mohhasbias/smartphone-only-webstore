@@ -8,7 +8,9 @@ FILTER_PARTIALS = True
 FILTER = [
   'base.html',
   'partial/*',
-  'static/bower_components/*'
+  'static/bower_components/*.html',
+  '*.scss',
+  '*.less'
 ]
 
 ## When building, force the inclusion of all the HTML partials listed here.
