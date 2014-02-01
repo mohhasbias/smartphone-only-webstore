@@ -1,0 +1,7 @@
+{
+  "name": "foundation based mobile site",
+  "dependencies": {
+    "foundation": "zurb/bower-foundation",
+    "font-awesome": "~4.0.3"
+  }
+}

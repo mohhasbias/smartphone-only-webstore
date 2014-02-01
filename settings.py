@@ -8,6 +8,7 @@ FILTER_PARTIALS = True
 FILTER = [
   'base.html',
   'partial/*',
+  'static/bower_components/*'
 ]
 
 ## When building, force the inclusion of all the HTML partials listed here.

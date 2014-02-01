@@ -4,8 +4,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Murah Grosir Mobile Store</title>
-		<link rel="stylesheet" href="static/css/foundation.css" />
-		<script src="static/js/modernizr.js"></script>
+<!-- 		<link rel="stylesheet" href="static/css/foundation.css" /> -->
+		<script src="static/bower_components/modernizr/modernizr.js"></script>
 		
 		<link rel="stylesheet" href="static/css/app.css" />
 		<link rel="stylesheet" href="static/css/lightbox.css" />
@@ -22,7 +22,7 @@
 			<ul class="title-area">
 				<li class="name">
 					<a href="index.html">
-						<img style="height:100%;max-width:80%;background:white;padding-right:5px;" 
+						<img style="height:100%;max-width:80%;padding: 3px;" 
 						 src="static/img/murahgrosir353.png">
 					</a>
 				</li>
@@ -545,13 +545,33 @@
         <a href="product.html">
             <div class="row">
                 <div class="text-center small-5 columns">
-                    <img style="max-height:125px;" src="static/img/products/Ac-6218-Black-Dial-Ori-720rb-4.5cm.jpg">
+                    <img style="max-height:125px;" src="static/img/products/Ac-6218-White-Dial-Ori-720rb-4.5cm.jpg">
                 </div>
                 <div class="small-7 columns">
                     <h4>
-                        <strong>Alexandre Christie 6218 Black Dial</strong><br/>
+                        <strong>Alexandre Christie 6218 White Dial</strong><br/>
                         
                             <strong style="color:firebrick;">Rp 720.000</strong>
+                        
+                    </h4>
+                </div>
+            </div>
+        </a>
+        
+            <hr>
+        
+     
+        
+        <a href="product.html">
+            <div class="row">
+                <div class="text-center small-5 columns">
+                    <img style="max-height:125px;" src="static/img/products/Caterpillar-CAT-DO.161.34.129.jpg">
+                </div>
+                <div class="small-7 columns">
+                    <h4>
+                        <strong>Caterpillar CAT DO.161.34.129</strong><br/>
+                        
+                            <strong style="color:firebrick;">Rp 550.000</strong>
                         
                     </h4>
                 </div>
@@ -585,33 +605,13 @@
         <a href="product.html">
             <div class="row">
                 <div class="text-center small-5 columns">
-                    <img style="max-height:125px;" src="static/img/products/Ac-6218-Silver-Ori-700rb-4.5cm.jpg">
+                    <img style="max-height:125px;" src="static/img/products/Caterpillar-CAT-PO.141.65.132.jpg">
                 </div>
                 <div class="small-7 columns">
                     <h4>
-                        <strong>Alexandre Christie 6218 Silver</strong><br/>
+                        <strong>Caterpillar CAT PO.141.65.132</strong><br/>
                         
-                            <strong style="color:firebrick;">Rp 700.000</strong>
-                        
-                    </h4>
-                </div>
-            </div>
-        </a>
-        
-            <hr>
-        
-     
-        
-        <a href="product.html">
-            <div class="row">
-                <div class="text-center small-5 columns">
-                    <img style="max-height:125px;" src="static/img/products/Ac-6223-Silver-Ori-720rb-4.5cm.jpg">
-                </div>
-                <div class="small-7 columns">
-                    <h4>
-                        <strong>Alexandre Christie 6223 Silver</strong><br/>
-                        
-                            <strong style="color:firebrick;">Rp 720.000</strong>
+                            <strong style="color:firebrick;">Rp 550.000</strong>
                         
                     </h4>
                 </div>
@@ -653,8 +653,8 @@
 			</div>
 		</div>
 		
-		<script src="static/js/jquery.js"></script>
-		<script src="static/js/foundation.min.js"></script>
+		<script src="static/bower_components/jquery/jquery.js"></script>
+		<script src="static/bower_components/foundation/js/foundation.min.js"></script>
 		<script>
 		  $(document).foundation();
 		</script>
@@ -670,8 +670,15 @@
 		</script>
 		
 	<!-- 	browser-sync -->
-<!-- 		<script src='//192.168.150.1:3000/socket.io/socket.io.js'></script> -->
-<!-- 		<script src='//192.168.150.1:3001/client/browser-sync-client.min.js'></script> -->
+		<script>
+			var host = (location.host || 'localhost').split(':')[0];
+			document.write(
+				'<script src="//' + host + ':3000/socket.io/socket.io.js"></' + 'script>' +
+				'<script>var ___socket___ = io.connect("http://' + host + ':3000");<' + '/script>' +
+				'<script src="//192.168.42.106:3001/client/browser-sync-client.min.js"><' + '/script>'
+			);
+		</script>
+		
 		
 	<!-- livereload -->
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

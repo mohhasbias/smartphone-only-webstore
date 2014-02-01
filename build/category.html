@@ -4,8 +4,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Murah Grosir Mobile Store</title>
-		<link rel="stylesheet" href="static/css/foundation.css" />
-		<script src="static/js/modernizr.js"></script>
+<!-- 		<link rel="stylesheet" href="static/css/foundation.css" /> -->
+		<script src="static/bower_components/modernizr/modernizr.js"></script>
 		
 		<link rel="stylesheet" href="static/css/app.css" />
 		<link rel="stylesheet" href="static/css/lightbox.css" />
@@ -22,7 +22,7 @@
 			<ul class="title-area">
 				<li class="name">
 					<a href="index.html">
-						<img style="height:100%;max-width:80%;background:white;padding-right:5px;" 
+						<img style="height:100%;max-width:80%;padding: 3px;" 
 						 src="static/img/murahgrosir353.png">
 					</a>
 				</li>
@@ -786,8 +786,8 @@
 			</div>
 		</div>
 		
-		<script src="static/js/jquery.js"></script>
-		<script src="static/js/foundation.min.js"></script>
+		<script src="static/bower_components/jquery/jquery.js"></script>
+		<script src="static/bower_components/foundation/js/foundation.min.js"></script>
 		<script>
 		  $(document).foundation();
 		</script>
@@ -803,8 +803,15 @@
 		</script>
 		
 	<!-- 	browser-sync -->
-<!-- 		<script src='//192.168.150.1:3000/socket.io/socket.io.js'></script> -->
-<!-- 		<script src='//192.168.150.1:3001/client/browser-sync-client.min.js'></script> -->
+		<script>
+			var host = (location.host || 'localhost').split(':')[0];
+			document.write(
+				'<script src="//' + host + ':3000/socket.io/socket.io.js"></' + 'script>' +
+				'<script>var ___socket___ = io.connect("http://' + host + ':3000");<' + '/script>' +
+				'<script src="//192.168.42.106:3001/client/browser-sync-client.min.js"><' + '/script>'
+			);
+		</script>
+		
 		
 	<!-- livereload -->
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
