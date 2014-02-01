@@ -6,11 +6,15 @@ module.exports = function(grunt){
 				files: [
 					'source/*.html',
 					'source/partial/*.html'
-				],
-				options: {
-					livereload: true
-				}
+				]
 			},
+			sass: {
+				files: 'scss/**/*.scss',
+				tasks: ['sass']
+			},
+			options: {
+				livereload: true
+			}
 		},
 		browser_sync: {
 			bsFiles: {
@@ -19,11 +23,25 @@ module.exports = function(grunt){
 			options: {
 				watchTask: true
 			}
+		},
+		sass: {
+			options: {
+				includePaths: ['source/static/bower_components/foundation/scss']
+			},
+			dist: {
+				options: {
+					outputStyle: 'compressed'
+				},
+				files: {
+					'source/static/css/app.css': 'source/static/scss/app.scss'
+				}
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-browser-sync');
+	grunt.loadNpmTasks('grunt-sass');
 
-	grunt.registerTask('default',['browser_sync', 'watch']);
+	grunt.registerTask('default',['sass', 'browser_sync', 'watch']);
 };
