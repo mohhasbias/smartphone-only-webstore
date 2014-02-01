@@ -1,6 +1,7 @@
 {
-  "name": "foundation-libsass-template",
+  "name": "foundation based mobile site",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "font-awesome": "~4.0.3"
   }
 }

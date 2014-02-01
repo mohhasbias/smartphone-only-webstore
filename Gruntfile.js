@@ -6,14 +6,14 @@ module.exports = function(grunt){
 				files: [
 					'source/*.html',
 					'source/partial/*.html'
-				]
+				],
+				options: {
+					livereload: true
+				}
 			},
 			sass: {
-				files: 'scss/**/*.scss',
+				files: 'source/static/scss/**/*.scss',
 				tasks: ['sass']
-			},
-			options: {
-				livereload: true
 			}
 		},
 		browser_sync: {
@@ -26,7 +26,9 @@ module.exports = function(grunt){
 		},
 		sass: {
 			options: {
-				includePaths: ['source/static/bower_components/foundation/scss']
+				includePaths: [
+					'source/static/bower_components/foundation/scss',
+					'source/static/bower_components/font-awesome/scss']
 			},
 			dist: {
 				options: {
