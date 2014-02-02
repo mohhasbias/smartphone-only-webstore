@@ -450,7 +450,7 @@
 		</nav>
 	</div>
 					
-		
+
 		<br/>
 		
 		<!-- 	search button -->
@@ -458,11 +458,11 @@
 	<div class="row">
 		<div class="small-12 columns">
 			<div class="row collapse">
-				<div class="small-8 columns">
-				  <input type="text" placeholder="Product Name...">
+				<div class="small-9 columns">
+				  <input type="text" placeholder="Mencari apa?">
 				</div>
-				<div class="small-4 columns">
-				  <a href="search.html" class="button postfix">Search</a>
+				<div class="small-3 columns">
+				  <a href="search.html" class="button postfix"><i class="fa fa-search fa-lg"></i></a>
 				</div>
 			</div>
 		</div>
@@ -537,6 +537,8 @@
 		  $(document).foundation();
 		</script>
 		
+		<script src="static/js/app.js"></script>
+		
 <!-- 		lightbox -->
 		<script src="static/js/vendor/lightbox-2.6.min.js"></script>
 		
@@ -553,7 +555,7 @@
 			document.write(
 				'<script src="//' + host + ':3000/socket.io/socket.io.js"></' + 'script>' +
 				'<script>var ___socket___ = io.connect("http://' + host + ':3000");<' + '/script>' +
-				'<script src="//192.168.42.106:3001/client/browser-sync-client.min.js"><' + '/script>'
+				'<script src="//' + host + ':3001/client/browser-sync-client.min.js"><' + '/script>'
 			);
 		</script>
 		
