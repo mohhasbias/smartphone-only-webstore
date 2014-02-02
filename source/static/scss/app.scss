@@ -3,6 +3,7 @@
 
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import "font-awesome";
+
 // Or selectively include components
 // @import
 //   "foundation/components/accordion",
@@ -40,3 +41,24 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+// accordion custom styles
+.accordion dd > a {
+    & {
+        background-color: $accordion-navigation-bg-color;
+        border: solid 1px transparent;
+    }
+    
+    &.active {
+        background-color: scale-color(#fff, $lightness: -1%);
+        border: solid 1px $accordion-navigation-bg-color;
+    }
+    
+    & > .fa-chevron-down, &.active > .fa-chevron-up {
+        display: block;
+    }
+    
+    & > .fa-chevron-up, &.active > .fa-chevron-down {
+        display: none;
+    }
+}

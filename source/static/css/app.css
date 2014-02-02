@@ -917,10 +917,10 @@ select {
         background: #e3e3e3; }
   .accordion .content {
     display: none;
-    padding: 0.9375rem; }
+    padding: 0 0 0 0.9375rem; }
     .accordion .content.active {
       display: block;
-      background: #fff; }
+      background: #efefef; }
 
 .alert-box {
   border-style: solid;
@@ -5766,3 +5766,14 @@ th.hide-for-touch {
 
 .fa-plus-square-o:before {
   content: "\f196"; }
+
+.accordion dd > a {
+  background-color: #efefef;
+  border: solid 1px transparent; }
+.accordion dd > a.active {
+  background-color: #fcfcfc;
+  border: solid 1px #efefef; }
+.accordion dd > a > .fa-chevron-down, .accordion dd > a.active > .fa-chevron-up {
+  display: block; }
+.accordion dd > a > .fa-chevron-up, .accordion dd > a.active > .fa-chevron-down {
+  display: none; }

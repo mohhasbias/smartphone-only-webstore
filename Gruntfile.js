@@ -14,6 +14,12 @@ module.exports = function(grunt){
 			sass: {
 				files: 'source/static/scss/**/*.scss',
 				tasks: ['sass']
+			},
+			js: {
+				files: 'source/static/js/**/*.js',
+				options: {
+					livereload: true
+				}
 			}
 		},
 		browser_sync: {
