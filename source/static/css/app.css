@@ -909,7 +909,7 @@ select {
     .accordion dd > a {
       background: #efefef;
       color: #222;
-      padding: 1rem;
+      padding: 0.75rem;
       display: block;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size: 1rem; }
@@ -917,7 +917,7 @@ select {
         background: #e3e3e3; }
   .accordion .content {
     display: none;
-    padding: 0 0 0 0.9375rem; }
+    padding: 0 0 0.625rem 0.625rem; }
     .accordion .content.active {
       display: block;
       background: #efefef; }
@@ -5774,9 +5774,20 @@ th.hide-for-touch {
   background-color: #efefef;
   border: solid 1px transparent; }
 .accordion dd > a.active {
-  background-color: #fcfcfc;
-  border: solid 1px #efefef; }
+  background-color: #d7d7d7;
+  border: solid 1px #d7d7d7;
+  border-left: solid 5px #008CBA;
+  border-bottom: none; }
 .accordion dd > a > .fa-chevron-down, .accordion dd > a.active > .fa-chevron-up {
   display: block; }
 .accordion dd > a > .fa-chevron-up, .accordion dd > a.active > .fa-chevron-down {
   display: none; }
+
+.accordion .content {
+  border: solid 1px transparent; }
+.accordion .content.active {
+  border: solid 1px #d7d7d7;
+  border-top: none; }
+
+.accordion .link {
+  padding: 0.75rem; }

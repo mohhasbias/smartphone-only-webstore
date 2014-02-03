@@ -111,7 +111,8 @@ $primary-color: #008CBA;
 
 // $include-html-accordion-classes: $include-html-classes;
 
-// $accordion-navigation-padding: rem-calc(16);
+//$accordion-navigation-padding: rem-calc(16);
+$accordion-navigation-padding: rem-calc(12);
 $accordion-navigation-bg-color: #efefef;
 // $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
@@ -120,7 +121,7 @@ $accordion-navigation-bg-color: #efefef;
 // $accordion-navigation-font-family: $body-font-family;
 
 // $accordion-content-padding: $column-gutter/2;
-$accordion-content-padding: 0 0 0 $column-gutter/2;
+$accordion-content-padding: 0 0 $column-gutter/3 $column-gutter/3;
 // $accordion-content-active-bg-color: #fff;
 $accordion-content-active-bg-color: $accordion-navigation-bg-color;
 
