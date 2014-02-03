@@ -5767,6 +5767,9 @@ th.hide-for-touch {
 .fa-plus-square-o:before {
   content: "\f196"; }
 
+.top-bar.expanded .toggle-topbar a {
+  background-color: #333; }
+
 .accordion dd > a {
   background-color: #efefef;
   border: solid 1px transparent; }
