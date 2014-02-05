@@ -18,18 +18,9 @@
 			<section class="top-bar-section">
 				<!-- Right Nav Section -->
 				<ul class="right">
-					{% for category in data.categories recursive %}
-						{% if category.subcategory is defined %}
-							<li class="has-dropdown">
-								<a href="#">{{category.name}}</a>
-								<ul class="dropdown">
-									{{loop(category.subcategory)}}
-								</ul>
-							</li>
-						{% else %}
-							<li><a href="category.html">{{category.name}}</a></li>
-						{% endif %}
-					{% endfor %}
+					<li><a href="about.html"><i class="fa fa-question-circle fa-2x fa-fw pull-left"></i>About</a></li>
+					<li><a href="testimoni.html"><i class="fa fa-comment fa-2x fa-fw pull-left"></i>Testimoni</a></li>
+					<li><a href="pemesanan.html"><i class="fa fa-shopping-cart fa-2x fa-fw pull-left"></i>Pemesanan</a></li>
 				</ul>
 			  </section>
 		</nav>
