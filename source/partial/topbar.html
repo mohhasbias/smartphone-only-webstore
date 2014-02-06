@@ -18,9 +18,26 @@
 			<section class="top-bar-section">
 				<!-- Right Nav Section -->
 				<ul class="right">
-					<li><a href="about.html"><i class="fa fa-question-circle fa-2x fa-fw pull-left"></i>About</a></li>
-					<li><a href="testimoni.html"><i class="fa fa-comment fa-2x fa-fw pull-left"></i>Testimoni</a></li>
+					<li><a href="page-about.html"><i class="fa fa-question-circle fa-2x fa-fw pull-left"></i>Tentang Kami</a></li>
+					<li><a href="testimoni.html"><i class="fa fa-comment fa-2x fa-fw pull-left"></i>Testimoni Pembeli</a></li>
 					<li><a href="pemesanan.html"><i class="fa fa-shopping-cart fa-2x fa-fw pull-left"></i>Pemesanan</a></li>
+					<li class="has-dropdown">
+						<a href="#"><i class="fa fa-th-list fa-2x fa-fw pull-left"></i>Semua Kategori</a>
+						<ul class="dropdown">
+							{% for category in data.categories recursive %}
+								{% if category.subcategory is defined %}
+									<li class="has-dropdown">
+										<a href="#">{{category.name}}</a>
+										<ul class="dropdown">
+											{{loop(category.subcategory)}}
+										</ul>
+									</li>
+								{% else %}
+									<li><a href="category.html">{{category.name}}</a></li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</li>
 				</ul>
 			  </section>
 		</nav>
