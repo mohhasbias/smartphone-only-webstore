@@ -1,5 +1,7 @@
 http://0.0.0.0:8080/category.html
 http://0.0.0.0:8080/index.html
 http://0.0.0.0:8080/page-about.html
+http://0.0.0.0:8080/page-pemesanan.html
+http://0.0.0.0:8080/page-testimoni.html
 http://0.0.0.0:8080/product.html
 http://0.0.0.0:8080/search.html
