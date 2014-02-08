@@ -561,6 +561,21 @@
 <!-- 		lightbox -->
 		<script src="static/js/vendor/lightbox-2.6.min.js"></script>
 		
+<!-- 		totopjs -->
+		<script src="static/bower_components/totop.js/totop.min.js"></script>
+		<script>
+			$(document).totop();
+			$("#totop .fa").removeClass("fa-3x");
+			$("#totop .fa").addClass("fa-lg");
+			$("#totop").addClass("button tiny");
+			$("#totop").append(" Back to Top");
+		</script>
+		<style>
+			#totop:hover {
+				color: #ccc;
+			}
+		</style>
+		
 <!-- 		fittext -->
 		<script src="static/js/vendor/jquery.fittext.js"></script>
 		<script>
