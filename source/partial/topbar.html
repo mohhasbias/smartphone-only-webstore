@@ -18,26 +18,18 @@
 			<section class="top-bar-section">
 				<!-- Right Nav Section -->
 				<ul class="right">
-					<li class="has-dropdown">
-						<a href="#"><i class="fa fa-th-list fa-2x fa-fw pull-left"></i>Semua Kategori</a>
-						<ul class="dropdown">
-							{% for category in data.categories recursive %}
-								{% if category.subcategory is defined %}
-									<li class="has-dropdown">
-										<a href="#">{{category.name}}</a>
-										<ul class="dropdown">
-											{{loop(category.subcategory)}}
-										</ul>
-									</li>
-								{% else %}
-									<li><a href="category.html">{{category.name}}</a></li>
-								{% endif %}
-							{% endfor %}
-						</ul>
-					</li>
-					<li><a href="page-pemesanan.html"><i class="fa fa-shopping-cart fa-2x fa-fw pull-left"></i>Cara Pesan</a></li>
-					<li><a href="page-about.html"><i class="fa fa-question-circle fa-2x fa-fw pull-left"></i>Profil</a></li>
-					<li><a href="page-testimoni.html"><i class="fa fa-comment fa-2x fa-fw pull-left"></i>Testimoni</a></li>
+					{% for category in data.categories recursive %}
+						{% if category.subcategory is defined %}
+							<li class="has-dropdown">
+								<a href="#">{{category.name}}</a>
+								<ul class="dropdown">
+									{{loop(category.subcategory)}}
+								</ul>
+							</li>
+						{% else %}
+							<li><a href="category.html">{{category.name}}</a></li>
+						{% endif %}
+					{% endfor %}
 				</ul>
 			  </section>
 		</nav>
