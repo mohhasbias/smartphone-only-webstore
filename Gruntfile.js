@@ -11,15 +11,18 @@ module.exports = function(grunt){
 					livereload: true
 				}
 			},
-			sass: {
-				files: 'source/static/scss/**/*.scss',
-				tasks: ['sass']
-			},
+//			sass: {
+//				files: 'sass/**/*.scss',
+//				tasks: ['sass']
+//			},
 			js: {
 				files: 'source/static/js/**/*.js',
 				options: {
 					livereload: true
 				}
+			},
+			grunt: {
+				files: ['Gruntfile.js']
 			}
 		},
 		browser_sync: {
@@ -33,7 +36,9 @@ module.exports = function(grunt){
 		sass: {
 			options: {
 				includePaths: [
-					'source/static/bower_components/foundation/scss',
+					'/home/rumaisyah/.rvm/gems/ruby-1.9.3-p429@mg2mobile/gems/zurb-foundation-3.2.5/scss/',
+					'/home/rumaisyah/.rvm/gems/ruby-1.9.3-p429@mg2mobile/gems/compass-0.12.2/frameworks/compass/stylesheets/',
+					'/home/rumaisyah/.rvm/gems/ruby-1.9.3-p429@mg2mobile/gems/modular-scale-1.0.6/stylesheets/',
 					'source/static/bower_components/font-awesome/scss']
 			},
 			dist: {
@@ -41,7 +46,7 @@ module.exports = function(grunt){
 					outputStyle: 'compact'
 				},
 				files: {
-					'source/static/css/app.css': 'source/static/scss/app.scss'
+					'source/static/css/app.css': 'sass/app.scss'
 				}
 			}
 		}
@@ -51,5 +56,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-sass');
 
-	grunt.registerTask('default',['sass', 'browser_sync', 'watch']);
+//	grunt.registerTask('default',['sass', 'browser_sync', 'watch']);
+	grunt.registerTask('default',['browser_sync', 'watch']);
 };
