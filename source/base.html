@@ -4,12 +4,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Murah Grosir Mobile Store</title>
+<!-- 		<link rel="stylesheet" href="/static/css/foundation.css" /> -->
 		<script src="/static/bower_components/modernizr/modernizr.js"></script>
 		
 		<link rel="stylesheet" href="/static/css/app.css" />
+		<link rel="stylesheet" href="/static/css/lightbox.css" />
 	</head>
 	<body>
-		{#
 	<!-- 		facebook sdk -->
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {
@@ -19,7 +20,6 @@
 		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-    #}
     
 		{% include "partial/topbar.html" %}
 
@@ -44,7 +44,7 @@
 		<hr>
 		
 <!-- 		social media -->
-{#		<div class="row">
+		<div class="row">
 			<div class="small-12 columns">
 				<div style="margin-bottom:5px;">Follow us</div>
 			</div>
@@ -64,7 +64,7 @@
 					data-show-screen-name="false"
 					data-lang="en">Follow</a>
 			</div>
-		</div> #}
+		</div>
 		<br>
 	<!-- 	customer support -->
 		<div class="row">
@@ -103,6 +103,9 @@
 		
 		<script src="/static/js/app.js"></script>
 		
+<!-- 		lightbox -->
+		<script src="/static/js/vendor/lightbox-2.6.min.js"></script>
+		
 <!-- 		totopjs -->
 		<script src="/static/bower_components/totop.js/totop.min.js"></script>
 		<script>
@@ -118,10 +121,8 @@
 			}
 		</style>
 		
-		{#
 <!-- 		twitter sdk -->
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		#}
 		
 <!-- 		fittext -->
 		<script src="/static/js/vendor/jquery.fittext.js"></script>
